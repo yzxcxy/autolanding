@@ -1,0 +1,33 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/fqc/catkin_ws/devel/include/**",
+        "/home/fqc/Prometheus/devel/include/**",
+        "/home/fqc/prometheus_mavros/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/fqc/catkin_ws/src/apriltag_position/include/**",
+        "/home/fqc/prometheus_mavros/src/mavros/libmavconn/include/**",
+        "/home/fqc/Prometheus/Simulator/livox_laser_gazebo_plugins/include/**",
+        "/home/fqc/prometheus_mavros/src/mavros/mavros/include/**",
+        "/home/fqc/prometheus_mavros/src/mavros/mavros_msgs/include/**",
+        "/home/fqc/Prometheus/Simulator/gazebo_simulator/include/**",
+        "/home/fqc/Prometheus/Modules/uav_control/include/**",
+        "/home/fqc/Prometheus/Simulator/realsense_gazebo_plugin/include/**",
+        "/home/fqc/prometheus_mavros/src/mavros/test_mavros/include/**",
+        "/home/fqc/Prometheus/Simulator/velodyne_gazebo_plugins/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
