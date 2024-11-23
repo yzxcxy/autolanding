@@ -4,6 +4,15 @@
 
 ```shell
 .
+├── autonomous_landing
+│   ├── CMakeLists.txt
+│   ├── include
+│   │   ├── autonomous_landing
+│   │   ├── mission_utils.h
+│   │   └── printf_utils.h
+│   ├── package.xml
+│   └── src
+│       └── autonomous_landing.cpp  //自动降落文件
 ├── apriltag_detection
 │   ├── apriltag.rviz
 │   ├── CMakeLists.txt
@@ -38,7 +47,7 @@
 
 ```
 
-# 如何使用
+# Apriltag功能如何使用
 注意git下来的是一个叫apriltag_transformer的文件夹，但是这个使用的时候子文件夹是ros工作空间中的src中的内容，使用需要复制出来。
 
 ## 安装apriltag_ros功能包
@@ -110,6 +119,14 @@ roslaunch apriltag_detection continuous_detection.launch
 ```shel
 rosrun apriltag_position apriltag_position
 ```
+
+
+
+# 相对位置转化mavros_msgs/AttitudeTarget
+
+这里主要修改https://github.com/haolin11/myautoland_ws里的src/tutorial_demo/advanced/autonomous_landing/src/autonomous_landing.cpp文件，添加的功能函数为computeAttitudeTarget。
+
+computeAttitudeTarget是通过计算无人机相对于目标位置的误差，并结合比例-积分-微分控制（PID），生成一个包含姿态四元数和推力值的 `AttitudeTarget` 消息，以便调整无人机的姿态和推力，最终实现位置控制。
 
 
 
