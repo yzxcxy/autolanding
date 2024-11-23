@@ -39,6 +39,7 @@
 ```
 
 # 如何使用
+注意git下来的是一个叫apriltag_transformer的文件夹，但是这个使用的时候子文件夹是ros工作空间中的src中的内容，使用需要复制出来。
 
 ## 安装apriltag_ros功能包
 
