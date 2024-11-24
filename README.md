@@ -124,7 +124,8 @@ rosrun apriltag_position apriltag_position
 
 # 相对位置转化mavros_msgs/AttitudeTarget
 
-这里主要修改https://github.com/haolin11/myautoland_ws里的src/tutorial_demo/advanced/autonomous_landing/src/autonomous_landing.cpp文件，添加的功能函数为computeAttitudeTarget。
+
+这里主要修改 https://github.com/haolin11/myautoland_ws   里的src/tutorial_demo/advanced/autonomous_landing/src/autonomous_landing.cpp文件，添加的功能函数为computeAttitudeTarget。
 
 computeAttitudeTarget是通过计算无人机相对于目标位置的误差，并结合比例-积分-微分控制（PID），生成一个包含姿态四元数和推力值的 `AttitudeTarget` 消息，以便调整无人机的姿态和推力，最终实现位置控制。
 
