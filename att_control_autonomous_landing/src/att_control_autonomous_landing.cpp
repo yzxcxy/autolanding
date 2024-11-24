@@ -498,7 +498,7 @@ int main(int argc, char **argv)
         }
         g_command_now.header.stamp = ros::Time::now();
         g_command_now.Command_ID = g_command_now.Command_ID + 1;
-        g_command_pub.publish(g_command_now);
+        //g_command_pub.publish(g_command_now);
 
         //发布mavros需要的内容
         g_mavros_attitude_target_pub.publish(att_msg);

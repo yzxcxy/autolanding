@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>autonomous_landing</name>
+  <name>att_control_autonomous_landing</name>
   <version>0.1.0</version>
   <description>Autonomous landing system for UAV</description>
 

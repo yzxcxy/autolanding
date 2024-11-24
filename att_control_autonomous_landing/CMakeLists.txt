@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(autonomous_landing)
+project(att_control_autonomous_landing)
 
 ## 编译选项
 add_compile_options(-std=c++11)
@@ -33,7 +33,7 @@ include_directories(
 )
 
 ## 添加可执行文件
-add_executable(${PROJECT_NAME}_node src/autonomous_landing.cpp)
+add_executable(${PROJECT_NAME}_node src/att_control_autonomous_landing.cpp)
 
 ## 链接依赖库
 target_link_libraries(${PROJECT_NAME}_node
