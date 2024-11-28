@@ -23,6 +23,8 @@
 │   ├── include
 │   │   └── apriltag_position
 │   ├── launch
+│   │   ├── apriltag_position.launch
+│   │   └── start_all.launch
 │   ├── msg
 │   │   └── DetectionInfo.msg
 │   ├── package.xml
@@ -100,8 +102,17 @@
 │       │   └── TRPYCommand.msg
 │       └── package.xml
 ├── image-20241122142559152.png
+├── image_distortion_correction
+│   ├── CMakeLists.txt
+│   ├── include
+│   │   └── image_distortion_correction
+│   ├── launch
+│   │   └── image_distortion_correction.launch
+│   ├── package.xml
+│   └── src
+│       ├── image_distortion_correction_node.cpp
+│       └── rev.jpg
 └── README.md
-
 
 ```
 
@@ -140,7 +151,7 @@ roslaunch apriltag_detection camera.launch
 
 ## 注意
 
-因为image_proc在英伟达的nx平台出现了问题，比如/usb_cam/image_raw接收不到，或者出现段错误，为了临时解决这个问题，使用了一些取巧的方式。（初步确定是apriltag_position没有启动的问题，但是项目较赶，就不深入解决了）
+因为image_proc在英伟达的nx平台出现了问题，比如/usb_cam/image_raw接收不到，或者出现段错误，为了临时解决这个问题，直接使用opencv写一个包替换掉原来的image_proc(见image_distortion_correction文件夹)
 
 
 
@@ -154,10 +165,10 @@ roslaunch apriltag_detection camerawithoutimageproc.launch
 
 
 
-启动image_proc
+启动image_distortion_correction
 
 ```shell
-ROS_NAMESPACE rosrun image_proc image_proc
+roslaunch image_distortion_correction image_distortion_correction.launch
 ```
 
 
@@ -204,8 +215,9 @@ roslaunch apriltag_detection continuous_detection.launch
 
 ## 启动话题转化结点
 
-```shel
-rosrun apriltag_position apriltag_position
+
+```shell
+roslaunch apriltag_position apriltag_position.launch
 ```
 
 

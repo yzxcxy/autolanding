@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find apriltag_detection)/launch/camerawithoutimageproc.launch"/>
+
+  <include file="$(find image_distortion_correction)/launch/image_distortion_correction.launch"/>
+
+  <include file="$(find apriltag_detection)/launch/continuous_detection.launch"/>
+
+    <include file="$(find apriltag_position)/launch/apriltag_position.launch"/>    
+</launch>

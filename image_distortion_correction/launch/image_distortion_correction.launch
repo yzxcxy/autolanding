@@ -1,0 +1,4 @@
+<launch>
+    <node name="image_distortion_correction" pkg="image_distortion_correction" type="image_distortion_correction_node" output="screen">
+    </node>
+</launch>

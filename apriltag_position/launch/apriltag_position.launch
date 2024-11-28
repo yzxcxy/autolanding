@@ -1,0 +1,4 @@
+<launch>
+    <node name="apriltag_position" pkg="apriltag_position" type="apriltag_position" output="screen">
+    </node>
+</launch>
