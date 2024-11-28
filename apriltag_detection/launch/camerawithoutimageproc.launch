@@ -13,8 +13,8 @@
     
     <!-- <node name="charge_cam_image_proc" pkg="image_proc" type="image_proc" output="screen" /> -->
 
-    <!-- <node pkg="tf" type="static_transform_publisher" name="base_footprint_to_camera"
+    <node pkg="tf" type="static_transform_publisher" name="base_footprint_to_camera"
         args="-0.04 0.0 0.05 -1.57 0.0 -1.57 base_footprint usb_cam 20">
-    </node>     -->
+    </node>
 
 </launch>
