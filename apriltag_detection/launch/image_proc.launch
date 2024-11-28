@@ -1,0 +1,13 @@
+<launch>
+
+    <!-- <remap from="/usb_cam/image_raw" to="/image_raw"/>
+    <remap from="/usb_cam/camera_info" to="/camera_info"/> -->
+    <group ns="usb_cam">
+        <node name="charge_cam_image_proc" pkg="image_proc" type="image_proc" output="screen"   >
+            <!-- <remap from="/usb_cam/image_raw" to="/image_raw"/>
+            <remap from="/usb_cam/camera_info" to="/camera_info"/> -->
+        </node>
+    </group>
+   
+
+</launch>
